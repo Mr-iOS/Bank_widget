@@ -17,7 +17,3 @@ def get_mask_account(card_number: int | str) -> str:
     else:
         return "Введён неверный формат данных"
 
-
-if __name__ == "__main__":
-    print(get_mask_card_number(1234567890123451))
-    print(get_mask_account(12345678901234567890))
