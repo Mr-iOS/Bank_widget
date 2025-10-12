@@ -13,4 +13,3 @@ def sort_by_date(list_of_dicts: list[dict], is_reverse: bool = True) -> list[dic
     if list_of_dicts:
         return sorted(list_of_dicts, key=lambda x: x["date"], reverse=is_reverse)
     return "Нет данных"
-

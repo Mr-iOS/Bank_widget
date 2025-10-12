@@ -22,4 +22,3 @@ def get_date(date: str) -> str:
     if date:
         return f"{date[8:10]}.{date[5:7]}.{date[:4]}"
     return "Нет данных"
-

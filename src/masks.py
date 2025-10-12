@@ -16,4 +16,3 @@ def get_mask_account(card_number: int | str) -> str:
         return f"**{str(card_number)[-4:]}"
     else:
         return "Введён неверный формат данных"
-

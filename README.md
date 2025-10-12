@@ -76,6 +76,18 @@ test_list = [
 [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
 [{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'}, {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}, {'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}]
 ```
+Файл __[generators.py](src/generators.py)__ отвечает за генерацию номеров карт и получение данных о транзакциях.
+```commandline
+filter_by_currency(transactions: list[Dict[str, Any]], currency: str)
+transaction_descriptions(transactions: list[dict])
+card_number_generator(start: int, end: int)
+```
+Пример использования:
+```commandline
+usd_transactions = list(filter_by_currency(sample_transactions, "USD"))
+descriptions = list(transaction_descriptions(usd_transactions))
+card_numbers = list(card_number_generator(1, 2))
+```
 
 Тестирование кода:
 ```commandline
